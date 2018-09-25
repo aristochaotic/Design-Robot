@@ -1,17 +1,21 @@
-#include WemosInit
-#include Servo
+#include <WemosInit.h>
+#include <Servo.h>
+
 
 Servo left;
 Servo right;
 
 
 void setup() {
-  // adjust later for actual pins
-  left.attach(R1);
-  right.attach(R2);
+  left.attach(11);
+  right.attach(12);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+  delay(5000);
+  left.write(180);
+  right.write(180);
+  delay(3000);
+  left.write(90);
+  right.write(90);
 }
